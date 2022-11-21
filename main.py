@@ -46,7 +46,6 @@ for section in config.sections():
 
 	for item in items:
 		# Extract files from each items.
-		print(item)
 		headline = item.select_one(config[section]["titleSelector"]).text.strip()
 		summary = item.select_one(config[section]["descriptionSelector"]).text.strip()
 		link = item.select_one(config[section]["linkSelector"]).get('href').strip()
