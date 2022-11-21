@@ -33,7 +33,7 @@ for section in config.sections():
 	s = soup.select_one(config[section]["containerSelector"])
 	items = s.select(config[section]["itemSelector"])
 
-	f = open(f"{section}.rss", "w")
+	f = open(f"{section}.xml", "w")
 	f.truncate()
 	f.write('<?xml version="1.0" encoding="utf-8" standalone="yes" ?>\n')
 	f.write('<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">\n')
@@ -65,6 +65,6 @@ for section in config.sections():
 	f.write('</channel>\n')
 	f.write('</rss>')
 
-	index.write(f"<li><a href='https://feeds.lesueur.nz/{section}.xml'>{config[section]['title']} | https://feeds.lesueur.nz/{section}.xml</a></li>\n")
+	index.write(f"<li><a href='https://feeds.lesueur.nz/{section}.xml'>{config[section]['title']} > https://feeds.lesueur.nz/{section}.xml</a></li>\n")
 
 index.write(f"</ul>\n<p>Find more information on <a href='https://github.com/finnito/customRSS'>GitHub</a></body>\n</html>")
