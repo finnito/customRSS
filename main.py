@@ -41,7 +41,7 @@ for section in config.sections():
 	f.write('<title>' + config[section]["title"] + '</title>\n')
 	f.write('<link>' + config[section]['url'] + '</link>\n')
 	f.write('<description>' + config[section]['url'] + '</description>\n')
-	f.write('<atom:link href="https://feeds.lesueur.nz/' + section + '.xml" rel="self" type="application/rss+xml" />\n')
+	f.write('<atom:link href="https://rss.lesueur.nz/' + section + '.xml" rel="self" type="application/rss+xml" />\n')
 	f.write('<lastBuildDate>' + dt.strftime('%a, %d %b %Y %H:%M:%S %z') + '</lastBuildDate>\n')
 
 	for item in items:
