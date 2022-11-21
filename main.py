@@ -14,7 +14,7 @@ calendar = parsedatetime.Calendar()
 config = configparser.ConfigParser()
 config.read('feeds.config')
 
-index = open(f"index.html", "w")
+index = open(f"public/index.html", "w")
 index.truncate()
 index.write(f"<!DOCTYPE HTML>\n\
 <html lang='en'>\n\
@@ -33,7 +33,7 @@ for section in config.sections():
 	s = soup.select_one(config[section]["containerSelector"])
 	items = s.select(config[section]["itemSelector"])
 
-	f = open(f"{section}.xml", "w")
+	f = open(f"public/{section}.xml", "w")
 	f.truncate()
 	f.write('<?xml version="1.0" encoding="utf-8" standalone="yes" ?>\n')
 	f.write('<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">\n')
