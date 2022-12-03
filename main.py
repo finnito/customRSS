@@ -28,7 +28,7 @@ for section in config.sections():
 
 index.write(f"\
 </head>\n\
-<body><p>I generate these feeds with a script because RNZ does not provide RSS feeds for tags.</p><ul>\n")
+<body><p>I generate these feeds with a script because the websites do not provide feeds.</p><ul>\n")
 
 for section in config.sections():
 	# Request website and parse
