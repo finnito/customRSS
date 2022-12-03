@@ -70,7 +70,7 @@ for section in config.sections():
 	f.write('</channel>\n')
 	f.write('</rss>')
 
-	index.write(f"<li><a href='https://rss.lesueur.nz/{section}.xml'>{config[section]['title']} > https://feeds.lesueur.nz/{section}.xml</a></li>\n")
+	index.write(f"<li><a href='https://rss.lesueur.nz/{section}.xml'>{config[section]['title']} | https://rss.lesueur.nz/{section}.xml</a></li>\n")
 
 index.write(f"<p>Last Built: {datetime.now()}")
 index.write(f"</ul>\n<p>Find more information on <a href='https://github.com/finnito/customRSS'>GitHub</a></body>\n</html>")
